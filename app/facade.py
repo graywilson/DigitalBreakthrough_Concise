@@ -54,7 +54,7 @@ def get_group_properties(group_products: list[Product]) -> list[str]:
     return []
 
 
-def get_product_properties(product: Product, properties: list[str]) -> Product:
+def get_product_with_properties(product: Product, properties: list[str]) -> Product:
     """
 
     :param product: товар
