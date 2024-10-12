@@ -1,6 +1,10 @@
-app/data/
-app/models/
 docs/
+spravochnik_tovarov.accdb
+ED_IZM.xlsx
+GOST.xlsx
+MTR.xlsx
+OKPD_2.xlsx
+model.safetensors
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
