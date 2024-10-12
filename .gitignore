@@ -1,5 +1,5 @@
-data/
-models/
+app/data/
+app/models/
 docs/
 
 # Byte-compiled / optimized / DLL files
