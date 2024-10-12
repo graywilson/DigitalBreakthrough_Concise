@@ -42,9 +42,9 @@ class AIRequest:
 
 def main():
     # Пример использования:
-    ai = AIRequest("")
+    ai = AIRequest(".")
     result = ai.analyze("Напиши стих об осени")
-    # print(result)  # Раскомментируйте, если хотите вывести результат еще раз
+    print(result)  # Раскомментируйте, если хотите вывести результат еще раз
 
 if __name__ == "__main__":
     main()

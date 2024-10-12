@@ -1,6 +1,6 @@
 # program.py
 
-from app.ai.ai_request import AIRequest  # Предполагается, что класс AIAnalysis находится в файле ai_analysis.py
+from ai.ai_request import AIRequest  # Предполагается, что класс AIAnalysis находится в файле ai_analysis.py
 
 
 def main():

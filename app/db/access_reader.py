@@ -1,3 +1,4 @@
+import os
 import pyodbc
 
 
@@ -30,3 +31,22 @@ class AccessReader:
         except pyodbc.Error as e:
             print(f"Ошибка при подключении к базе данных: {e}")
             return None
+
+
+def main():
+    # Пример использования:
+    db = AccessReader()
+
+    # Строим абсолютный путь к базе данных относительно текущего скрипта
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    db_path = os.path.join(base_dir, "..", "data", "accdb", "spravochnik_tovarov.accdb")
+    
+    print(f"Путь к базе данных: {db_path}")
+    
+    records = db.read_all(db_path)
+
+    for record in records:
+        print(record)
+
+if __name__ == "__main__":
+    main()
