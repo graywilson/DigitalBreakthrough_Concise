@@ -1,4 +1,4 @@
-from product import Product
+from app.modules.product import Product
 from db.access_reader import AccessReader
 
 
@@ -17,22 +17,22 @@ def read_db(db_filepath: str) -> list[Product]:
     return products
 
 
-def get_subcategories(products: list[Product]) -> list[list[Product]]:
+def get_subcategories(products: list[Product]) -> dict:
     """
 
     :param products: список объектов Product
     :return: список подкатегорий с товарами, объединенными по ОКПД2
     """
-    pass
+    return {}
 
 
-def get_groups(subcategory: list[Product]) -> list[str]:
+def get_groups(subcategory_products: list[Product]) -> list[str]:
     """
 
-    :param subcategory: список товаров одной подкатегории
+    :param subcategory_products: список товаров одной подкатегории
     :return: список групп для данной подкатегории
     """
-    pass
+    return []
 
 
 def choose_group(product: Product, groups: list[str]) -> str:
@@ -42,26 +42,26 @@ def choose_group(product: Product, groups: list[str]) -> str:
     :param groups: группы для подкатегории, к которой относится товар
     :return: группа, к которой товар должен быть отнесен
     """
-    pass
+    return ''
 
 
-def get_group_properties(group: list[Product]) -> list[str]:
+def get_group_properties(group_products: list[Product]) -> list[str]:
     """
 
-    :param group: группа с товарами в ней
+    :param group_products: группа с товарами в ней
     :return: свойства для данной группы
     """
-    pass
+    return []
 
 
-def get_product_properties(product: Product, properties: list[str]):
+def get_product_properties(product: Product, properties: list[str]) -> Product:
     """
 
     :param product: товар
     :param properties: свойства группы товара, в которые необходимо разложить параметры товара
     :return:
     """
-    pass
+    return product
 
 
 def save_table(products: list[Product], group_name: str, properties: list[str]):
