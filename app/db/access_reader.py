@@ -8,7 +8,6 @@ class AccessReader:
     def read(self, db_filepath: str):
         connection = self._connect(db_filepath)
 
-
     def _connect(self, db_filepath: str) -> pyodbc.Connection | None:
         conn_str = (
             r"Driver={Microsoft Access Driver (*.mdb, *.accdb)};"
