@@ -9,7 +9,12 @@ def read_db(db_filepath: str) -> list[Product]:
     :return: список объектов Product (перенос записей таблиц в объекты)
     """
     access_reader = AccessReader()
-    return access_reader.read(db_filepath)
+    db_records = access_reader.read_all(db_filepath)
+    products = []
+    for record in db_records:
+        products.append(Product(record[0], record[1], record[6], record[5], parameters=record[4], gost=record[3],
+                                marking=record[2]))
+    return products
 
 
 def get_subcategories(products: list[Product]) -> list[list[Product]]:
