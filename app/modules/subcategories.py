@@ -1,4 +1,4 @@
-from product import Product
+from .product import Product
 
 def get_subcategory(products: list[Product]) -> dict[str, list[Product]]:
 

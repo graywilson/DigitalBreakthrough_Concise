@@ -1,5 +1,5 @@
-from app.modules.product import Product
-from subcategories import get_subcategory
+from modules.product import Product
+from modules.subcategories import get_subcategory
 from db.access_reader import AccessReader
 
 

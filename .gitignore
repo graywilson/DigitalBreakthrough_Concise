@@ -1,3 +1,4 @@
+*.json
 docs/
 spravochnik_tovarov.accdb
 ED_IZM.xlsx

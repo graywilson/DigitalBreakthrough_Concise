@@ -4,6 +4,7 @@ from facade import *
 def main():
     products = read_db('./data/accdb/spravochnik_tovarov.accdb')
     subcategory_products = get_subcategories(products)
+    print(subcategory_products)
 
     subcategory_groups = {}
     for subcategory_name, prods in subcategory_products.items():
