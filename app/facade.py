@@ -1,8 +1,10 @@
 from product import Product
+from db.access_reader import AccessReader
 
 
-def read_db() -> list[Product]:
-    pass
+def read_db(db_filepath: str) -> list[Product]:
+    access_reader = AccessReader()
+    return access_reader.read(db_filepath)
 
 
 def get_subcategories(products: list[Product]) -> list[list[Product]]:
